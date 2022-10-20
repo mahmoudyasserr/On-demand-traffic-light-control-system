@@ -1,0 +1,454 @@
+Archive member included because of file (symbol)
+
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+                              c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm16.o (exit)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+                              ./MCAL/ext_int/external_interrupt.o (__do_clear_bss)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(abort.o)
+                              ./APP/app.o (abort)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+text             0x00000000         0x00020000         xr
+data             0x00800060         0x0000ffa0         rw !x
+eeprom           0x00810000         0x00010000         rw !x
+fuse             0x00820000         0x00000400         rw !x
+lock             0x00830000         0x00000400         rw !x
+signature        0x00840000         0x00000400         rw !x
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm16.o
+LOAD ./MCAL/timer/timer.o
+LOAD ./MCAL/gpio/gpio.o
+LOAD ./MCAL/ext_int/external_interrupt.o
+LOAD ./HAL/led/led.o
+LOAD ./APP/app.o
+LOAD ./main.o
+LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
+LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a
+LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
+
+.hash
+ *(.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+ *(.rel.text.*)
+ *(.rel.gnu.linkonce.t*)
+
+.rela.text
+ *(.rela.text)
+ *(.rela.text.*)
+ *(.rela.gnu.linkonce.t*)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+ *(.rel.rodata.*)
+ *(.rel.gnu.linkonce.r*)
+
+.rela.rodata
+ *(.rela.rodata)
+ *(.rela.rodata.*)
+ *(.rela.gnu.linkonce.r*)
+
+.rel.data
+ *(.rel.data)
+ *(.rel.data.*)
+ *(.rel.gnu.linkonce.d*)
+
+.rela.data
+ *(.rela.data)
+ *(.rela.data.*)
+ *(.rela.gnu.linkonce.d*)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.text           0x00000000      0xe78
+ *(.vectors)
+ .vectors       0x00000000       0x54 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm16.o
+                0x00000000                __vectors
+                0x00000000                __vector_default
+ *(.vectors)
+ *(.progmem.gcc*)
+ *(.progmem*)
+                0x00000054                . = ALIGN (0x2)
+                0x00000054                __trampolines_start = .
+ *(.trampolines)
+ .trampolines   0x00000054        0x0 linker stubs
+ *(.trampolines*)
+                0x00000054                __trampolines_end = .
+ *(.jumptables)
+ *(.jumptables*)
+ *(.lowtext)
+ *(.lowtext*)
+                0x00000054                __ctors_start = .
+ *(.ctors)
+                0x00000054                __ctors_end = .
+                0x00000054                __dtors_start = .
+ *(.dtors)
+                0x00000054                __dtors_end = .
+ SORT(*)(.ctors)
+ SORT(*)(.dtors)
+ *(.init0)
+ .init0         0x00000054        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm16.o
+                0x00000054                __init
+ *(.init0)
+ *(.init1)
+ *(.init1)
+ *(.init2)
+ .init2         0x00000054        0xc c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm16.o
+ *(.init2)
+ *(.init3)
+ *(.init3)
+ *(.init4)
+ .init4         0x00000060       0x10 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+                0x00000060                __do_clear_bss
+ *(.init4)
+ *(.init5)
+ *(.init5)
+ *(.init6)
+ *(.init6)
+ *(.init7)
+ *(.init7)
+ *(.init8)
+ *(.init8)
+ *(.init9)
+ .init9         0x00000070        0x8 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm16.o
+ *(.init9)
+ *(.text)
+ .text          0x00000078        0x4 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm16.o
+                0x00000078                __vector_12
+                0x00000078                __bad_interrupt
+                0x00000078                __vector_6
+                0x00000078                __vector_3
+                0x00000078                __vector_11
+                0x00000078                __vector_13
+                0x00000078                __vector_17
+                0x00000078                __vector_19
+                0x00000078                __vector_7
+                0x00000078                __vector_5
+                0x00000078                __vector_4
+                0x00000078                __vector_9
+                0x00000078                __vector_2
+                0x00000078                __vector_15
+                0x00000078                __vector_8
+                0x00000078                __vector_14
+                0x00000078                __vector_10
+                0x00000078                __vector_16
+                0x00000078                __vector_18
+                0x00000078                __vector_20
+ .text          0x0000007c        0x0 ./MCAL/timer/timer.o
+ .text          0x0000007c        0x0 ./MCAL/gpio/gpio.o
+ .text          0x0000007c        0x0 ./MCAL/ext_int/external_interrupt.o
+ .text          0x0000007c        0x0 ./HAL/led/led.o
+ .text          0x0000007c        0x0 ./APP/app.o
+ .text          0x0000007c        0x0 ./main.o
+ .text          0x0000007c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .text          0x0000007c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ .text          0x0000007c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(abort.o)
+                0x0000007c                . = ALIGN (0x2)
+ *(.text.*)
+ .text.Timer0_Init
+                0x0000007c       0x58 ./MCAL/timer/timer.o
+                0x0000007c                Timer0_Init
+ .text.Timer0_GetCounts
+                0x000000d4       0x14 ./MCAL/timer/timer.o
+                0x000000d4                Timer0_GetCounts
+ .text.Timer0_SetCounts
+                0x000000e8       0x1c ./MCAL/timer/timer.o
+                0x000000e8                Timer0_SetCounts
+ .text.Timer0_Deinit
+                0x00000104       0x1a ./MCAL/timer/timer.o
+                0x00000104                Timer0_Deinit
+ .text.Timer0_Delay_250ms
+                0x0000011e       0x64 ./MCAL/timer/timer.o
+                0x0000011e                Timer0_Delay_250ms
+ .text.GPIO_setupPinDirection
+                0x00000182      0x1e0 ./MCAL/gpio/gpio.o
+                0x00000182                GPIO_setupPinDirection
+ .text.GPIO_writePin
+                0x00000362      0x1e0 ./MCAL/gpio/gpio.o
+                0x00000362                GPIO_writePin
+ .text.GPIO_readPin
+                0x00000542      0x13e ./MCAL/gpio/gpio.o
+                0x00000542                GPIO_readPin
+ .text.__vector_1
+                0x00000680       0x5a ./MCAL/ext_int/external_interrupt.o
+                0x00000680                __vector_1
+ .text.INT0_setCallBack
+                0x000006da       0x24 ./MCAL/ext_int/external_interrupt.o
+ .text.INT0_init
+                0x000006fe       0x94 ./MCAL/ext_int/external_interrupt.o
+                0x000006fe                INT0_init
+ .text.Led_Init
+                0x00000792       0x58 ./HAL/led/led.o
+                0x00000792                Led_Init
+ .text.Led_On   0x000007ea       0x48 ./HAL/led/led.o
+                0x000007ea                Led_On
+ .text.Led_Off  0x00000832       0x48 ./HAL/led/led.o
+                0x00000832                Led_Off
+ .text.Leds_Init
+                0x0000087a       0x70 ./HAL/led/led.o
+                0x0000087a                Leds_Init
+ .text.INT0_CallBack
+                0x000008ea       0x2c ./APP/app.o
+ .text.Cars_Go  0x00000916       0x6a ./APP/app.o
+ .text.Cars_Ready
+                0x00000980       0xae ./APP/app.o
+ .text.Cars_Pedestrains_Ready
+                0x00000a2e      0x108 ./APP/app.o
+ .text.Cars_Stop
+                0x00000b36       0x6c ./APP/app.o
+ .text.Normal_Mode
+                0x00000ba2       0x40 ./APP/app.o
+ .text.Pedstrians_Go
+                0x00000be2       0x52 ./APP/app.o
+ .text.Pedstrians_Done
+                0x00000c34       0x3c ./APP/app.o
+ .text.Traffic_Green_Or_Yellow_Handler
+                0x00000c70       0x58 ./APP/app.o
+ .text.Traffic_Red_Handler
+                0x00000cc8       0x46 ./APP/app.o
+ .text.Pedestrian_Mode
+                0x00000d0e       0xde ./APP/app.o
+ .text.App_Init
+                0x00000dec       0x3c ./APP/app.o
+                0x00000dec                App_Init
+ .text.App_Start
+                0x00000e28       0x22 ./APP/app.o
+                0x00000e28                App_Start
+ .text.main     0x00000e4a       0x20 ./main.o
+                0x00000e4a                main
+ .text.libgcc   0x00000e6a        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .text.libgcc   0x00000e6a        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ .text.avr-libc
+                0x00000e6a        0xa c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(abort.o)
+                0x00000e6a                abort
+                0x00000e74                . = ALIGN (0x2)
+ *(.fini9)
+ .fini9         0x00000e74        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+                0x00000e74                exit
+                0x00000e74                _exit
+ *(.fini9)
+ *(.fini8)
+ *(.fini8)
+ *(.fini7)
+ *(.fini7)
+ *(.fini6)
+ *(.fini6)
+ *(.fini5)
+ *(.fini5)
+ *(.fini4)
+ *(.fini4)
+ *(.fini3)
+ *(.fini3)
+ *(.fini2)
+ *(.fini2)
+ *(.fini1)
+ *(.fini1)
+ *(.fini0)
+ .fini0         0x00000e74        0x4 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ *(.fini0)
+                0x00000e78                _etext = .
+
+.data           0x00800060        0x0 load address 0x00000e78
+                0x00800060                PROVIDE (__data_start, .)
+ *(.data)
+ .data          0x00800060        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm16.o
+ .data          0x00800060        0x0 ./MCAL/timer/timer.o
+ .data          0x00800060        0x0 ./MCAL/gpio/gpio.o
+ .data          0x00800060        0x0 ./MCAL/ext_int/external_interrupt.o
+ .data          0x00800060        0x0 ./HAL/led/led.o
+ .data          0x00800060        0x0 ./APP/app.o
+ .data          0x00800060        0x0 ./main.o
+ .data          0x00800060        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .data          0x00800060        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ .data          0x00800060        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(abort.o)
+ *(.data*)
+ *(.rodata)
+ *(.rodata*)
+ *(.gnu.linkonce.d*)
+                0x00800060                . = ALIGN (0x2)
+                0x00800060                _edata = .
+                0x00800060                PROVIDE (__data_end, .)
+
+.bss            0x00800060        0x4
+                0x00800060                PROVIDE (__bss_start, .)
+ *(.bss)
+ .bss           0x00800060        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm16.o
+ .bss           0x00800060        0x0 ./MCAL/timer/timer.o
+ .bss           0x00800060        0x0 ./MCAL/gpio/gpio.o
+ .bss           0x00800060        0x0 ./MCAL/ext_int/external_interrupt.o
+ .bss           0x00800060        0x0 ./HAL/led/led.o
+ .bss           0x00800060        0x0 ./APP/app.o
+ .bss           0x00800060        0x0 ./main.o
+ .bss           0x00800060        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .bss           0x00800060        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ .bss           0x00800060        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(abort.o)
+ *(.bss*)
+ .bss.g_INT0_callBack_ptr
+                0x00800060        0x2 ./MCAL/ext_int/external_interrupt.o
+ .bss.currentState
+                0x00800062        0x1 ./APP/app.o
+ .bss.trafficState
+                0x00800063        0x1 ./APP/app.o
+ *(COMMON)
+                0x00800064                PROVIDE (__bss_end, .)
+                0x00000e78                __data_load_start = LOADADDR (.data)
+                0x00000e78                __data_load_end = (__data_load_start + SIZEOF (.data))
+
+.noinit         0x00800064        0x0
+                0x00800064                PROVIDE (__noinit_start, .)
+ *(.noinit*)
+                0x00800064                PROVIDE (__noinit_end, .)
+                0x00800064                _end = .
+                0x00800064                PROVIDE (__heap_start, .)
+
+.eeprom         0x00810000        0x0
+ *(.eeprom*)
+                0x00810000                __eeprom_end = .
+
+.fuse
+ *(.fuse)
+ *(.lfuse)
+ *(.hfuse)
+ *(.efuse)
+
+.lock
+ *(.lock*)
+
+.signature
+ *(.signature*)
+
+.stab           0x00000000     0x2304
+ *(.stab)
+ .stab          0x00000000      0x3c0 ./MCAL/timer/timer.o
+ .stab          0x000003c0      0x510 ./MCAL/gpio/gpio.o
+                                0x51c (size before relaxing)
+ .stab          0x000008d0      0x30c ./MCAL/ext_int/external_interrupt.o
+                                0x318 (size before relaxing)
+ .stab          0x00000bdc      0x540 ./HAL/led/led.o
+                                0x54c (size before relaxing)
+ .stab          0x0000111c      0xf6c ./APP/app.o
+                                0xf78 (size before relaxing)
+ .stab          0x00002088      0x27c ./main.o
+                                0x3cc (size before relaxing)
+
+.stabstr        0x00000000     0x1482
+ *(.stabstr)
+ .stabstr       0x00000000     0x1482 ./MCAL/timer/timer.o
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment
+ *(.comment)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges
+ *(.debug_aranges)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info
+ *(.debug_info)
+ *(.gnu.linkonce.wi.*)
+
+.debug_abbrev
+ *(.debug_abbrev)
+
+.debug_line
+ *(.debug_line)
+
+.debug_frame
+ *(.debug_frame)
+
+.debug_str
+ *(.debug_str)
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+OUTPUT(On-demand_traffic_light_control.elf elf32-avr)
+LOAD linker stubs
